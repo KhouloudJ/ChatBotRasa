@@ -1,0 +1,36 @@
+{
+    "name": "hsbc_bot_rasa",
+    "version": "1.0.0",
+    "description": "This is HSBC PMO info Bot by Synechron",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "author": "Synechron",
+    "license": "Synechron.com",
+    "keywords": [
+      "botbuilder",
+      "bots",
+      "chatbots",
+      "botbuilder-samples"
+    ],
+    "bugs": {
+      "url": ""
+    },
+    "repository": {
+      "type": "",
+      "url": ""
+    },
+    "dependencies": {
+        "bluebird": "^3.4.7",
+        "botbuilder": "^3.8.2",
+        "dotenv-extended": "^1.0.4",
+        "handlebars": "^4.0.6",
+        "hapi": "^16.0.2",
+        "lodash.filter": "^4.6.0",
+        "lodash.take": "^4.1.1",
+        "request": "^2.83.0",
+        "restify": "^4.3.0",
+        "vision": "^4.1.1"
+    }
+  }
+  
