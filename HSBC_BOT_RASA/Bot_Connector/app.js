@@ -8,10 +8,12 @@ var Request = require("request");
 
 
 // Setup Restify Server
+var inMemoryStorage = new builder.MemoryBotStorage();
 var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
     console.log('%s listening to %s', server.name, server.url);
 });
+
 
 // Create connector and listen for messages
 var connector = new builder.ChatConnector({
@@ -28,7 +30,8 @@ var bot = new builder.UniversalBot(connector, function (session) {
         session.send(session.message.text)
    /*session.send('Sorry, I did not understand \'%s\'. Type \'help\' if you need assistance.', session.message.text); */
 
-});
+})
+.set('storage', inMemoryStorage);
 
 
 
